@@ -1,0 +1,555 @@
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Linux version 3.16.0-rc6 (root@5ea550d3653f) (gcc version 4.8.5 (Linaro GCC 4.8-2015.06) ) #1 SMP PREEMPT Mon Jul 19 07:25:41 UTC 2021
+[    0.000000] CPU: AArch64 Processor [410fc0f0] revision 0
+[    0.000000] No Cache Writeback Granule information, assuming cache line size 64
+[    0.000000] Memory limited to 2048MB
+[    0.000000] cma: CMA: reserved 16 MiB at ff000000
+[    0.000000] On node 0 totalpages: 524288
+[    0.000000]   DMA zone: 7168 pages used for memmap
+[    0.000000]   DMA zone: 0 pages reserved
+[    0.000000]   DMA zone: 524288 pages, LIFO batch:31
+[    0.000000] PERCPU: Embedded 11 pages/cpu @ffffffc07efba000 s12800 r8192 d24064 u45056
+[    0.000000] pcpu-alloc: s12800 r8192 d24064 u45056 alloc=11*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 517120
+[    0.000000] Kernel command line: earlyprintk=pl011,0x1c090000 console=ttyAMA0 lpj=19988480 norandmaps rw loglevel=8 mem=2048MB root=/dev/sda1
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] Dentry cache hash table entries: 262144 (order: 9, 2097152 bytes)
+[    0.000000] Inode-cache hash table entries: 131072 (order: 8, 1048576 bytes)
+[    0.000000] Memory: 2041700K/2097152K available (4573K kernel code, 304K rwdata, 1640K rodata, 208K init, 187K bss, 55452K reserved)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vmalloc : 0xffffff8000000000 - 0xffffffbbffff0000   (245759 MB)
+[    0.000000]     vmemmap : 0xffffffbc01c00000 - 0xffffffbc03800000   (    28 MB)
+[    0.000000]     modules : 0xffffffbffc000000 - 0xffffffc000000000   (    64 MB)
+[    0.000000]     memory  : 0xffffffc000000000 - 0xffffffc080000000   (  2048 MB)
+[    0.000000]       .init : 0xffffffc000693000 - 0xffffffc0006c7200   (   209 kB)
+[    0.000000]       .text : 0xffffffc000080000 - 0xffffffc000692504   (  6218 kB)
+[    0.000000]       .data : 0xffffffc0006c8000 - 0xffffffc0007141e0   (   305 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] 	RCU restricting CPUs from NR_CPUS=8 to nr_cpu_ids=4.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    0.000000] NR_IRQS:64 nr_irqs:64 0
+[    0.000000] Architected cp15 timer(s) running at 100.00MHz (phys).
+[    0.000000] sched_clock: 56 bits at 100MHz, resolution 10ns, wraps every 2748779069440ns
+[    0.000014] Console: colour dummy device 80x25
+[    0.000015] Calibrating delay loop (skipped) preset value.. 3997.69 BogoMIPS (lpj=19988480)
+[    0.000015] pid_max: default: 32768 minimum: 301
+[    0.000022] Mount-cache hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000023] Mountpoint-cache hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000073] hw perfevents: no hardware support available
+[    0.060015] CPU1: Booted secondary processor
+[    0.080016] CPU2: Booted secondary processor
+[    0.100017] CPU3: Booted secondary processor
+[    0.100021] Brought up 4 CPUs
+[    0.100023] SMP: Total of 4 processors activated.
+[    0.100056] devtmpfs: initialized
+[    0.100465] atomic64_test: passed
+[    0.100501] regulator-dummy: no parameters
+[    0.100789] NET: Registered protocol family 16
+[    0.100916] vdso: 2 pages (1 code, 1 data) at base ffffffc0006cd000
+[    0.100919] hw-breakpoint: found 2 breakpoint and 2 watchpoint registers.
+[    0.100959] software IO TLB [mem 0xfc400000-0xfc800000] (4MB) mapped at [ffffffc07c400000-ffffffc07c7fffff]
+[    0.100960] Serial: AMBA PL011 UART driver
+[    0.101122] of_amba_device_create(): amba_device_add() failed (-19) for /smb/motherboard/iofpga@3,00000000/sysctl@020000
+[    0.101148] 1c090000.uart: ttyAMA0 at MMIO 0x1c090000 (irq = 37, base_baud = 0) is a PL011 rev3
+[    0.101182] console [ttyAMA0] enabled
+[    0.101217] of_amba_device_create(): amba_device_add() failed (-19) for /smb/motherboard/iofpga@3,00000000/uart@0a0000
+[    0.101231] of_amba_device_create(): amba_device_add() failed (-19) for /smb/motherboard/iofpga@3,00000000/uart@0b0000
+[    0.101246] of_amba_device_create(): amba_device_add() failed (-19) for /smb/motherboard/iofpga@3,00000000/uart@0c0000
+[    0.101258] of_amba_device_create(): amba_device_add() failed (-19) for /smb/motherboard/iofpga@3,00000000/wdt@0f0000
+[    0.130095] 3V3: 3300 mV 
+[    0.130151] vgaarb: loaded
+[    0.130190] SCSI subsystem initialized
+[    0.130211] libata version 3.00 loaded.
+[    0.130256] usbcore: registered new interface driver usbfs
+[    0.130266] usbcore: registered new interface driver hub
+[    0.130276] usbcore: registered new device driver usb
+[    0.130298] pps_core: LinuxPPS API ver. 1 registered
+[    0.130299] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.130305] PTP clock support registered
+[    0.130405] Switched to clocksource arch_sys_counter
+[    0.131270] NET: Registered protocol family 2
+[    0.131322] TCP established hash table entries: 16384 (order: 5, 131072 bytes)
+[    0.131347] TCP bind hash table entries: 16384 (order: 6, 262144 bytes)
+[    0.131377] TCP: Hash tables configured (established 16384 bind 16384)
+[    0.131381] TCP: reno registered
+[    0.131383] UDP hash table entries: 1024 (order: 3, 32768 bytes)
+[    0.131389] UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes)
+[    0.131406] NET: Registered protocol family 1
+[    0.131424] RPC: Registered named UNIX socket transport module.
+[    0.131425] RPC: Registered udp transport module.
+[    0.131425] RPC: Registered tcp transport module.
+[    0.131426] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.131428] PCI: CLS 0 bytes, default 64
+[    0.131562] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    0.131613] HugeTLB registered 2 MB page size, pre-allocated 0 pages
+[    0.133079] fuse init (API version 7.23)
+[    0.133145] msgmni has been set to 4019
+[    0.133196] io scheduler noop registered
+[    0.133235] io scheduler cfq registered (default)
+[    0.133517] pci-host-generic 30000000.pci: PCI host bridge to bus 0000:00
+[    0.133518] pci_bus 0000:00: root bus resource [io  0x0000-0xffff]
+[    0.133520] pci_bus 0000:00: root bus resource [mem 0x40000000-0x4fffffff]
+[    0.133522] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.133523] pci_bus 0000:00: scanning bus
+[    0.133525] pci 0000:00:00.0: [8086:1075] type 00 class 0x020000
+[    0.133527] pci 0000:00:00.0: reg 0x10: [mem 0x00000000-0x0001ffff]
+[    0.133530] pci 0000:00:00.0: reg 0x30: [mem 0x00000000-0x000007ff pref]
+[    0.133549] pci 0000:00:01.0: [8086:7111] type 00 class 0x010185
+[    0.133551] pci 0000:00:01.0: reg 0x10: [io  0x0000-0x0007]
+[    0.133553] pci 0000:00:01.0: reg 0x14: [io  0x0000-0x0003]
+[    0.133555] pci 0000:00:01.0: reg 0x18: [io  0x0000-0x0007]
+[    0.133556] pci 0000:00:01.0: reg 0x1c: [io  0x0000-0x0003]
+[    0.133558] pci 0000:00:01.0: reg 0x20: [io  0x0000-0x000f]
+[    0.133560] pci 0000:00:01.0: reg 0x30: [mem 0x00000000-0x000007ff pref]
+[    0.133581] pci_bus 0000:00: fixups for bus
+[    0.133582] pci_bus 0000:00: bus scan returning with max=00
+[    0.133584] pci 0000:00:00.0: calling quirk_e100_interrupt+0x0/0x1cc
+[    0.133589] pci 0000:00:00.0: fixup irq: got 33
+[    0.133590] pci 0000:00:00.0: assigning IRQ 33
+[    0.133593] pci 0000:00:01.0: fixup irq: got 34
+[    0.133594] pci 0000:00:01.0: assigning IRQ 34
+[    0.133596] pci 0000:00:00.0: BAR 0: assigned [mem 0x40000000-0x4001ffff]
+[    0.133598] pci 0000:00:00.0: BAR 6: assigned [mem 0x40020000-0x400207ff pref]
+[    0.133600] pci 0000:00:01.0: BAR 6: assigned [mem 0x40020800-0x40020fff pref]
+[    0.133601] pci 0000:00:01.0: BAR 4: assigned [io  0x1000-0x100f]
+[    0.133603] pci 0000:00:01.0: BAR 0: assigned [io  0x1010-0x1017]
+[    0.133605] pci 0000:00:01.0: BAR 2: assigned [io  0x1018-0x101f]
+[    0.133607] pci 0000:00:01.0: BAR 1: assigned [io  0x1020-0x1023]
+[    0.133608] pci 0000:00:01.0: BAR 3: assigned [io  0x1024-0x1027]
+[    0.133989] Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled
+[    0.134197] ata_piix 0000:00:01.0: version 2.13
+[    0.134199] ata_piix 0000:00:01.0: enabling device (0000 -> 0001)
+[    0.134204] ata_piix 0000:00:01.0: enabling bus mastering
+[    0.134413] scsi0 : ata_piix
+[    0.134464] scsi1 : ata_piix
+[    0.134487] ata1: PATA max UDMA/33 cmd 0x1010 ctl 0x1020 bmdma 0x1000 irq 34
+[    0.134488] ata2: PATA max UDMA/33 cmd 0x1018 ctl 0x1024 bmdma 0x1008 irq 34
+[    0.134559] e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
+[    0.134560] e1000: Copyright (c) 1999-2006 Intel Corporation.
+[    0.134563] e1000 0000:00:00.0: enabling device (0000 -> 0002)
+[    0.134565] e1000 0000:00:00.0: enabling bus mastering
+[    0.290414] ata1.00: ATA-7: M5 IDE Disk, , max UDMA/66
+[    0.290416] ata1.00: 4194288 sectors, multi 0: LBA 
+[    0.290422] ata1.00: configured for UDMA/33
+[    0.290439] scsi 0:0:0:0: Direct-Access     ATA      M5 IDE Disk      n/a  PQ: 0 ANSI: 5
+[    0.290491] sd 0:0:0:0: [sda] 4194288 512-byte logical blocks: (2.14 GB/1.99 GiB)
+[    0.290495] sd 0:0:0:0: Attached scsi generic sg0 type 0
+[    0.290504] sd 0:0:0:0: [sda] Write Protect is off
+[    0.290506] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+[    0.290512] sd 0:0:0:0: [sda] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+[    0.290566]  sda: sda1
+[    0.290623] sd 0:0:0:0: [sda] Attached SCSI disk
+[    0.410671] e1000 0000:00:00.0 eth0: (PCI:33MHz:32-bit) 00:90:00:00:00:01
+[    0.410672] e1000 0000:00:00.0 eth0: Intel(R) PRO/1000 Network Connection
+[    0.410679] e1000e: Intel(R) PRO/1000 Network Driver - 2.3.2-k
+[    0.410680] e1000e: Copyright(c) 1999 - 2014 Intel Corporation.
+[    0.410688] igb: Intel(R) Gigabit Ethernet Network Driver - version 5.0.5-k
+[    0.410689] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    0.410734] usbcore: registered new interface driver usb-storage
+[    0.410758] mousedev: PS/2 mouse device common for all mice
+[    0.410856] usbcore: registered new interface driver usbhid
+[    0.410857] usbhid: USB HID core driver
+[    0.410872] TCP: cubic registered
+[    0.410874] NET: Registered protocol family 17
+ [    0.411055] VFS: Mounted root (ext2 filesystem) on device 8:1.
+[    0.411066] devtmpfs: mounted
+[    0.411074] Freeing unused kernel memory: 208K (ffffffc000693000 - ffffffc0006c7000)
+Mount failed for selinuxfs on /sys/fs/selinux:  No such file or directory
+[    0.451496] random: init urandom read with 12 bits of entropy available
+ 
+
+
+
+
+
+Ubuntu 14.04 LTS localhost ttyAMA0
+
+localhost login: root
+Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.16.0-rc6 aarch64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+root@localhost:~# cd /dev/
+root@localhost:/dev# ls
+[0m[01;34mblock[0m               [01;34mpts[0m     [40;33;01msda1[0m    [40;33;01mtty2[0m   [40;33;01mtty37[0m  [40;33;01mtty54[0m    [40;33;01mttyp0[0m    [40;33;01mvcs2[0m
+[01;34mchar[0m                [40;33;01mptyp0[0m   [40;33;01msg0[0m     [40;33;01mtty20[0m  [40;33;01mtty38[0m  [40;33;01mtty55[0m    [40;33;01mttyp1[0m    [40;33;01mvcs3[0m
+[40;33;01mconsole[0m             [40;33;01mptyp1[0m   [01;36mshm[0m     [40;33;01mtty21[0m  [40;33;01mtty39[0m  [40;33;01mtty56[0m    [40;33;01mttyp2[0m    [40;33;01mvcs4[0m
+[40;31;01mcore[0m                [40;33;01mptyp2[0m   [01;36mstderr[0m  [40;33;01mtty22[0m  [40;33;01mtty4[0m   [40;33;01mtty57[0m    [40;33;01mttyp3[0m    [40;33;01mvcs5[0m
+[40;33;01mcpu_dma_latency[0m     [40;33;01mptyp3[0m   [01;36mstdin[0m   [40;33;01mtty23[0m  [40;33;01mtty40[0m  [40;33;01mtty58[0m    [40;33;01mttyp4[0m    [40;33;01mvcs6[0m
+[40;33;01mcuse[0m                [40;33;01mptyp4[0m   [01;36mstdout[0m  [40;33;01mtty24[0m  [40;33;01mtty41[0m  [40;33;01mtty59[0m    [40;33;01mttyp5[0m    [40;33;01mvcsa[0m
+[01;34mdisk[0m                [40;33;01mptyp5[0m   [40;33;01mtty[0m     [40;33;01mtty25[0m  [40;33;01mtty42[0m  [40;33;01mtty6[0m     [40;33;01mttyp6[0m    [40;33;01mvcsa1[0m
+[01;36mfd[0m                  [40;33;01mptyp6[0m   [40;33;01mtty0[0m    [40;33;01mtty26[0m  [40;33;01mtty43[0m  [40;33;01mtty60[0m    [40;33;01mttyp7[0m    [40;33;01mvcsa2[0m
+[40;33;01mfull[0m                [40;33;01mptyp7[0m   [40;33;01mtty1[0m    [40;33;01mtty27[0m  [40;33;01mtty44[0m  [40;33;01mtty61[0m    [40;33;01mttyp8[0m    [40;33;01mvcsa3[0m
+[40;33;01mfuse[0m                [40;33;01mptyp8[0m   [40;33;01mtty10[0m   [40;33;01mtty28[0m  [40;33;01mtty45[0m  [40;33;01mtty62[0m    [40;33;01mttyp9[0m    [40;33;01mvcsa4[0m
+[01;34minput[0m               [40;33;01mptyp9[0m   [40;33;01mtty11[0m   [40;33;01mtty29[0m  [40;33;01mtty46[0m  [40;33;01mtty63[0m    [40;33;01mttypa[0m    [40;33;01mvcsa5[0m
+[40;33;01mkmem[0m                [40;33;01mptypa[0m   [40;33;01mtty12[0m   [40;33;01mtty3[0m   [40;33;01mtty47[0m  [40;33;01mtty7[0m     [40;33;01mttypb[0m    [40;33;01mvcsa6[0m
+[40;33;01mkmsg[0m                [40;33;01mptypb[0m   [40;33;01mtty13[0m   [40;33;01mtty30[0m  [40;33;01mtty48[0m  [40;33;01mtty8[0m     [40;33;01mttypc[0m    [40;33;01mvga_arbiter[0m
+[40;33;01mmem[0m                 [40;33;01mptypc[0m   [40;33;01mtty14[0m   [40;33;01mtty31[0m  [40;33;01mtty49[0m  [40;33;01mtty9[0m     [40;33;01mttypd[0m    [40;33;01mzero[0m
+[40;33;01mnetwork_latency[0m     [40;33;01mptypd[0m   [40;33;01mtty15[0m   [40;33;01mtty32[0m  [40;33;01mtty5[0m   [40;33;01mttyAMA0[0m  [40;33;01mttype[0m
+[40;33;01mnetwork_throughput[0m  [40;33;01mptype[0m   [40;33;01mtty16[0m   [40;33;01mtty33[0m  [40;33;01mtty50[0m  [40;33;01mttyS0[0m    [40;33;01mttypf[0m
+[40;33;01mnull[0m                [40;33;01mptypf[0m   [40;33;01mtty17[0m   [40;33;01mtty34[0m  [40;33;01mtty51[0m  [40;33;01mttyS1[0m    [40;33;01murandom[0m
+[40;33;01mpsaux[0m               [40;33;01mrandom[0m  [40;33;01mtty18[0m   [40;33;01mtty35[0m  [40;33;01mtty52[0m  [40;33;01mttyS2[0m    [40;33;01mvcs[0m
+[40;33;01mptmx[0m                [40;33;01msda[0m     [40;33;01mtty19[0m   [40;33;01mtty36[0m  [40;33;01mtty53[0m  [40;33;01mttyS3[0m    [40;33;01mvcs1[0m
+root@localhost:/dev# cd /home/
+root@localhost:/home# ls
+[0m[01;34mpim_driver[0m  [01;34mpim_lib[0m
+root@localhost:/home# cd pim_driver/
+root@localhost:/home/pim_driver# ls
+Makefile    [0m[01;34mobj[0m             [01;32mrun_kernel_module.sh[0m  user_code.c
+[01;32mgo_test.sh[0m  pimbt_driver.h  test-driver.c
+root@localhost:/home/pim_driver# vi go_test.sh               ci  vi Makefile 
+^C
+root@localhost:/home/pim_driver# vi Makefile 
+^C
+root@localhost:/home/pim_driver# vi Makefile 
+^V  ^C
+[24;1HError detected while processing /usr/share/vim/vim74/filetype.vim:
+line  737:
+Interrupted
+Error detected while processing /usr/share/vim/vim74/syntax/syntax.vim:
+line   25:
+Interrupted
+Error detected while processing /usr/share/vim/vimrc:
+line   20:
+Interrupted
+Interrupt: Press ENTER or type command to continue[?1h=[1;24r[m[m[0m[H[J[24;1H"Makefile" [noeol] 36L, 961C[2;1Hobj-m += test-driver.o
+#obj-m += test_morteza.o
+CROSS_COMPILE := aarch64-linux-gnu-
+
+img := $(M5_PATH)/disks/aarch64-ubuntu-trusty-headless.img
+mroot := /mnt
+dest-dir := ${mroot}/home/pim_driver
+
+obj-dir := obj
+
+pim-driver-sources := pimbt_driver.h test-driver.c
+_pim-driver-obj := test-driver.ko
+pim-driver-obj := $(addprefix ${obj-dir}/, ${_pim-driver-obj})
+
+pim-driver-generated := *.order *.symvers .test-driver* *.o *.mod.c
+
+build: ${pim-driver-obj}
+
+${pim-driver-obj}: ${pim-driver-sources} | ${obj-dir}[21;9Hmake ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -C ../linux-aarch64-gemm[22;1H5-20140821 M=$(driver-dir) modules[23;9Hmv ${_pim-driver-obj} ${obj-dir}[24;63H1,0-1[9CTop[1;1H[24;63H2,1  [2;1H[24;63H3[3;1H[24;63H4[4;1H[24;63H5,0-1[5;1H[24;63H6,1  [6;1H[24;63H7[7;1H[24;63H8[8;1H[24;63H9,0-1[9;1H[24;63H10,1 [10;1H[24;64H1,0-1[11;1H[24;64H2,1  [12;1H[24;64H3[13;1H[24;64H4[14;1H[24;64H5,0-1[15;1H[24;64H6,1  [16;1H[24;64H7,0-1[17;1H[24;64H8,1  [18;1H[24;64H9,0-1[19;1H[24;63H20,1  [20;1H[24;64H1,1-8[21;8H[24;64H2[23;8H[1;23r[23;1H
+[1;24r[23;9Hmv ${pim-driver-generated} ${obj-dir}[24;1H[K[24;63H23,1-8[9C7%[23;8H[1;23r[23;1H
+[1;24r[23;9Hrm -rf ${obj-dir}/.tmp_versions[24;63H[K[24;63H24,1-8[8C14%[23;8H[1;23r[23;1H
+[1;24r[23;9Hmv .tmp_versions ${obj-dir}[24;63H[K[24;63H25,1-8[8C21%[23;8H[1;23r[23;1H
+[1;24r[23;9Hmount -o loop,offset=32256 ${img} ${mroot}[24;63H[K[24;63H26,1-8[8C28%[23;8H[1;23r[23;1H
+[1;24r[23;9Hrm -rf ${dest-dir}[24;63H[K[24;63H27,1-8[8C35%[23;8H[1;23r[23;1H
+[1;24r[23;9Hcp -r . ${dest-dir}[24;63H[K[24;63H28,1-8[8C42%[23;8H[1;23r[23;1H
+[1;24r[23;9Humount ${mroot}[24;63H[K[24;63H29,1-8[8C50%[23;8H[1;23r[23;1H
+[1;24r[24;63H[K[24;63H30,0-1[8C57%[23;1H[1;23r[23;1H
+[1;24r[23;1H${obj-dir}:[24;63H[K[24;63H31,1[10C64%[23;1H[1;23r[23;1H
+[1;24r[23;9Hmkdir $@[24;63H[K[24;63H32,1-8[8C71%[23;8H[1;23r[23;1H
+[1;24r[24;63H[K[24;63H33,0-1[8C78%[23;1H[1;23r[23;1H
+[1;24r[23;1Hclean:[24;63H[K[24;63H34,1[10C85%[23;1H[1;23r[23;1H
+[1;24r[23;9Hmake -C ../linux-aarch64-gem5-20140821 M=$(driver-dir) clean[24;63H[K[24;63H35,1-8[8C92%[23;8H[1;23r[23;1H
+[1;24r[23;9Hrm -rf obj[24;63H[K[24;63H36,1-8[8CBot[23;8H[24;64H5[22;8H[24;64H4,1  [21;1H[24;64H3,0-1[20;1H[24;63H[K[24;1H:wq"Makefile" 36L, 962C written[?1l>
+root@localhost:/home/pim_driver# ls
+Makefile    [0m[01;34mobj[0m             [01;32mrun_kernel_module.sh[0m  user_code.c
+[01;32mgo_test.sh[0m  pimbt_driver.h  test-driver.c
+root@localhost:/home/pim_driver# cp b obj/test-driver.ko test-driver.ko
+root@localhost:/home/pim_driver# ./go_test.sh 
+sudo: unable to resolve host localhost
+sudo: unable to resolve host localhost
+sudo: unable to resolve host localhost
+root@localhost:/home/pim_driver# ls
+Makefile    [0m[01;34mobj[0m             [01;32mrun_kernel_module.sh[0m  test-driver.ko
+[01;32mgo_test.sh[0m  pimbt_driver.h  test-driver.c         user_code.c
+root@localhost:/home/pim_driver# cd    vi run_kernel_module.sh 
+^C[24;1HError detected while processing /usr/share/vim/vim74/syntax/synload.vim:
+line    1:
+Interrupted
+Error detected while processing /usr/share/vim/vim74/syntax/syntax.vim:
+line   19:
+Interrupted
+Error detected while processing /usr/share/vim/vimrc:
+line   20:
+Interrupted
+Interrupt: Press ENTER or type command to continue[?1h=[1;24r[m[m[0m[H[J[24;1H"run_kernel_module.sh" 12L, 196C[1;1H#!/bin/bash
+
+sudo rm -rf /dev/pimbt
+sudo rmmod ./test-driver.ko
+make clean
+make
+gcc -o user_code user_code.c
+sudo mknod /dev/pimbt c 70 0
+sudo insmod ./test-driver.ko
+sudo chmod 666 /dev/pimbt
+
+
+[1m~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~[0m[24;63H1,1[11CAll[1;1H[24;1H[K[24;1H:wq"run_kernel_module.sh" 12L, 196C written[?1l>
+root@localhost:/home/pim_driver# ls
+Makefile    [0m[01;34mobj[0m             [01;32mrun_kernel_module.sh[0m  test-driver.ko
+[01;32mgo_test.sh[0m  pimbt_driver.h  test-driver.c         user_code.c
+root@localhost:/home/pim_driver# cd ..
+root@localhost:/home# cd pim_lib/
+root@localhost:/home/pim_lib# ls
+Makefile  libpim.a  [0m[01;34mobj[0m  [01;34msrc[0m  [01;34mtest[0m  [01;32mtest_code[0m
+root@localhost:/home/pim_lib# ./test
+-bash: ./test: Is a directory
+root@localhost:/home/pim_lib# ./test_code 
+Read data 888888889999999root@localhost:/home/pim_lib# cd ..
+root@localhost:/home# ls
+[0m[01;34mpim_driver[0m  [01;34mpim_lib[0m
+root@localhost:/home# cd ..
+root@localhost:/# ls
+[0m[01;34mbin[0m   [01;34mdev[0m  [01;34mhome[0m  [01;34mlost+found[0m  [01;34mmnt[0m  [01;34mproc[0m  [01;34mrun[0m   [01;34msrv[0m  [30;42mtmp[0m  [01;34mvar[0m
+[01;34mboot[0m  [01;34metc[0m  [01;34mlib[0m   [01;34mmedia[0m       [01;34mopt[0m  [01;34mroot[0m  [01;34msbin[0m  [01;34msys[0m  [01;34musr[0m
+root@localhost:/# cd b
+-bash: cd: b: No such file or directory
+root@localhost:/# cd bin/
+root@localhost:/bin# ls
+[0m[01;32mbash[0m           [01;32megrep[0m      [01;32mmountpoint[0m               [01;32mss[0m
+[01;32mbunzip2[0m        [01;32mfalse[0m      [01;36mmt[0m                       [01;32mstty[0m
+[01;32mbzcat[0m          [01;32mfgconsole[0m  [01;32mmt-gnu[0m                   [37;41msu[0m
+[01;36mbzcmp[0m          [01;32mfgrep[0m      [01;32mmv[0m                       [01;32msync[0m
+[01;32mbzdiff[0m         [01;32mfindmnt[0m    [01;36mnc[0m                       [01;32mtailf[0m
+[01;36mbzegrep[0m        [01;32mgrep[0m       [01;32mnc.openbsd[0m               [01;32mtar[0m
+[01;32mbzexe[0m          [01;32mgunzip[0m     [01;36mnetcat[0m                   [01;32mtempfile[0m
+[01;36mbzfgrep[0m        [01;32mgzexe[0m      [01;32mnetstat[0m                  [01;32mtouch[0m
+[01;32mbzgrep[0m         [01;32mgzip[0m       [01;36mnisdomainname[0m            [01;32mtrue[0m
+[01;32mbzip2[0m          [01;32mhostname[0m   [01;36mopen[0m                     [01;32mudevadm[0m
+[01;32mbzip2recover[0m   [01;32mip[0m         [01;32mopenvt[0m                   [37;41mumount[0m
+[01;36mbzless[0m         [01;32mkbd_mode[0m   [01;36mpidof[0m                    [01;32muname[0m
+[01;32mbzmore[0m         [01;32mkill[0m       [37;41mping[0m                     [01;32muncompress[0m
+[01;32mcat[0m            [01;32mkmod[0m       [37;41mping6[0m                    [01;32municode_start[0m
+[01;32mchgrp[0m          [01;32mless[0m       [01;32mplymouth[0m                 [01;32mvdir[0m
+[01;32mchmod[0m          [01;32mlessecho[0m   [01;32mplymouth-upstart-bridge[0m  [01;32mwhich[0m
+[01;32mchown[0m          [01;36mlessfile[0m   [01;32mps[0m                       [01;32mwhiptail[0m
+[01;32mchvt[0m           [01;32mlesskey[0m    [01;32mpwd[0m                      [01;36mypdomainname[0m
+[01;32mcp[0m             [01;32mlesspipe[0m   [01;36mrbash[0m                    [01;32mzcat[0m
+[01;32mcpio[0m           [01;32mln[0m         [01;32mreadlink[0m                 [01;32mzcmp[0m
+[01;32mdash[0m           [01;32mloadkeys[0m   [01;32mrm[0m                       [01;32mzdiff[0m
+[01;32mdate[0m           [01;32mlogin[0m      [01;32mrmdir[0m                    [01;32mzegrep[0m
+[01;32mdd[0m             [01;32mls[0m         [01;32mrun-parts[0m                [01;32mzfgrep[0m
+[01;32mdf[0m             [01;32mlsblk[0m      [01;32mrunning-in-container[0m     [01;32mzforce[0m
+[01;32mdir[0m            [01;36mlsmod[0m      [01;32msed[0m                      [01;32mzgrep[0m
+[01;32mdmesg[0m          [01;32mmkdir[0m      [01;32msetfont[0m                  [01;32mzless[0m
+[01;36mdnsdomainname[0m  [01;32mmknod[0m      [01;32msetupcon[0m                 [01;32mzmore[0m
+[01;36mdomainname[0m     [01;32mmktemp[0m     [01;36msh[0m                       [01;32mznew[0m
+[01;32mdumpkeys[0m       [01;32mmore[0m       [01;36msh.distrib[0m
+[01;32mecho[0m           [37;41mmount[0m      [01;32msleep[0m
+root@localhost:/bin# cd ..
+root@localhost:/# cd ..
+root@localhost:/# ls
+[0m[01;34mbin[0m   [01;34mdev[0m  [01;34mhome[0m  [01;34mlost+found[0m  [01;34mmnt[0m  [01;34mproc[0m  [01;34mrun[0m   [01;34msrv[0m  [30;42mtmp[0m  [01;34mvar[0m
+[01;34mboot[0m  [01;34metc[0m  [01;34mlib[0m   [01;34mmedia[0m       [01;34mopt[0m  [01;34mroot[0m  [01;34msbin[0m  [01;34msys[0m  [01;34musr[0m
+root@localhost:/# cd dev/
+root@localhost:/dev# ;s  ls
+[0m[01;34mblock[0m               [40;33;01mptmx[0m    [40;33;01msda[0m     [40;33;01mtty19[0m  [40;33;01mtty36[0m  [40;33;01mtty53[0m    [40;33;01mttyS3[0m    [40;33;01mvcs1[0m
+[01;34mchar[0m                [01;34mpts[0m     [40;33;01msda1[0m    [40;33;01mtty2[0m   [40;33;01mtty37[0m  [40;33;01mtty54[0m    [40;33;01mttyp0[0m    [40;33;01mvcs2[0m
+[40;33;01mconsole[0m             [40;33;01mptyp0[0m   [40;33;01msg0[0m     [40;33;01mtty20[0m  [40;33;01mtty38[0m  [40;33;01mtty55[0m    [40;33;01mttyp1[0m    [40;33;01mvcs3[0m
+[40;31;01mcore[0m                [40;33;01mptyp1[0m   [01;36mshm[0m     [40;33;01mtty21[0m  [40;33;01mtty39[0m  [40;33;01mtty56[0m    [40;33;01mttyp2[0m    [40;33;01mvcs4[0m
+[40;33;01mcpu_dma_latency[0m     [40;33;01mptyp2[0m   [01;36mstderr[0m  [40;33;01mtty22[0m  [40;33;01mtty4[0m   [40;33;01mtty57[0m    [40;33;01mttyp3[0m    [40;33;01mvcs5[0m
+[40;33;01mcuse[0m                [40;33;01mptyp3[0m   [01;36mstdin[0m   [40;33;01mtty23[0m  [40;33;01mtty40[0m  [40;33;01mtty58[0m    [40;33;01mttyp4[0m    [40;33;01mvcs6[0m
+[01;34mdisk[0m                [40;33;01mptyp4[0m   [01;36mstdout[0m  [40;33;01mtty24[0m  [40;33;01mtty41[0m  [40;33;01mtty59[0m    [40;33;01mttyp5[0m    [40;33;01mvcsa[0m
+[01;36mfd[0m                  [40;33;01mptyp5[0m   [40;33;01mtty[0m     [40;33;01mtty25[0m  [40;33;01mtty42[0m  [40;33;01mtty6[0m     [40;33;01mttyp6[0m    [40;33;01mvcsa1[0m
+[40;33;01mfull[0m                [40;33;01mptyp6[0m   [40;33;01mtty0[0m    [40;33;01mtty26[0m  [40;33;01mtty43[0m  [40;33;01mtty60[0m    [40;33;01mttyp7[0m    [40;33;01mvcsa2[0m
+[40;33;01mfuse[0m                [40;33;01mptyp7[0m   [40;33;01mtty1[0m    [40;33;01mtty27[0m  [40;33;01mtty44[0m  [40;33;01mtty61[0m    [40;33;01mttyp8[0m    [40;33;01mvcsa3[0m
+[01;34minput[0m               [40;33;01mptyp8[0m   [40;33;01mtty10[0m   [40;33;01mtty28[0m  [40;33;01mtty45[0m  [40;33;01mtty62[0m    [40;33;01mttyp9[0m    [40;33;01mvcsa4[0m
+[40;33;01mkmem[0m                [40;33;01mptyp9[0m   [40;33;01mtty11[0m   [40;33;01mtty29[0m  [40;33;01mtty46[0m  [40;33;01mtty63[0m    [40;33;01mttypa[0m    [40;33;01mvcsa5[0m
+[40;33;01mkmsg[0m                [40;33;01mptypa[0m   [40;33;01mtty12[0m   [40;33;01mtty3[0m   [40;33;01mtty47[0m  [40;33;01mtty7[0m     [40;33;01mttypb[0m    [40;33;01mvcsa6[0m
+[40;33;01mmem[0m                 [40;33;01mptypb[0m   [40;33;01mtty13[0m   [40;33;01mtty30[0m  [40;33;01mtty48[0m  [40;33;01mtty8[0m     [40;33;01mttypc[0m    [40;33;01mvga_arbiter[0m
+[40;33;01mnetwork_latency[0m     [40;33;01mptypc[0m   [40;33;01mtty14[0m   [40;33;01mtty31[0m  [40;33;01mtty49[0m  [40;33;01mtty9[0m     [40;33;01mttypd[0m    [40;33;01mzero[0m
+[40;33;01mnetwork_throughput[0m  [40;33;01mptypd[0m   [40;33;01mtty15[0m   [40;33;01mtty32[0m  [40;33;01mtty5[0m   [40;33;01mttyAMA0[0m  [40;33;01mttype[0m
+[40;33;01mnull[0m                [40;33;01mptype[0m   [40;33;01mtty16[0m   [40;33;01mtty33[0m  [40;33;01mtty50[0m  [40;33;01mttyS0[0m    [40;33;01mttypf[0m
+[40;33;01mpimbt[0m               [40;33;01mptypf[0m   [40;33;01mtty17[0m   [40;33;01mtty34[0m  [40;33;01mtty51[0m  [40;33;01mttyS1[0m    [40;33;01murandom[0m
+[40;33;01mpsaux[0m               [40;33;01mrandom[0m  [40;33;01mtty18[0m   [40;33;01mtty35[0m  [40;33;01mtty52[0m  [40;33;01mttyS2[0m    [40;33;01mvcs[0m
+root@localhost:/dev# vi pimbt 
+^C[24;1HError detected while processing /usr/share/vim/vim74/syntax/synload.vim:
+line   60:
+Interrupted
+Error detected while processing /usr/share/vim/vim74/syntax/syntax.vim:
+line   19:
+Interrupted
+Error detected while processing /usr/share/vim/vimrc:
+line   20:
+Interrupted
+Interrupt: Press ENTER or type command to continue[?1h=[1;24r[m[m[0m[H[J[24;1H"pimbt" is not a file[2;1H[1m~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~[0m[24;63H0,0-1[9CAll[1;1H[24;1H[K[24;1H:q![?1l>[24;1H[K[24;1Hroot@localhost:/dev# ls
+[0m[01;34mblock[0m               [40;33;01mptmx[0m    [40;33;01msda[0m     [40;33;01mtty19[0m  [40;33;01mtty36[0m  [40;33;01mtty53[0m    [40;33;01mttyS3[0m    [40;33;01mvcs1[0m
+[01;34mchar[0m                [01;34mpts[0m     [40;33;01msda1[0m    [40;33;01mtty2[0m   [40;33;01mtty37[0m  [40;33;01mtty54[0m    [40;33;01mttyp0[0m    [40;33;01mvcs2[0m
+[40;33;01mconsole[0m             [40;33;01mptyp0[0m   [40;33;01msg0[0m     [40;33;01mtty20[0m  [40;33;01mtty38[0m  [40;33;01mtty55[0m    [40;33;01mttyp1[0m    [40;33;01mvcs3[0m
+[40;31;01mcore[0m                [40;33;01mptyp1[0m   [01;36mshm[0m     [40;33;01mtty21[0m  [40;33;01mtty39[0m  [40;33;01mtty56[0m    [40;33;01mttyp2[0m    [40;33;01mvcs4[0m
+[40;33;01mcpu_dma_latency[0m     [40;33;01mptyp2[0m   [01;36mstderr[0m  [40;33;01mtty22[0m  [40;33;01mtty4[0m   [40;33;01mtty57[0m    [40;33;01mttyp3[0m    [40;33;01mvcs5[0m
+[40;33;01mcuse[0m                [40;33;01mptyp3[0m   [01;36mstdin[0m   [40;33;01mtty23[0m  [40;33;01mtty40[0m  [40;33;01mtty58[0m    [40;33;01mttyp4[0m    [40;33;01mvcs6[0m
+[01;34mdisk[0m                [40;33;01mptyp4[0m   [01;36mstdout[0m  [40;33;01mtty24[0m  [40;33;01mtty41[0m  [40;33;01mtty59[0m    [40;33;01mttyp5[0m    [40;33;01mvcsa[0m
+[01;36mfd[0m                  [40;33;01mptyp5[0m   [40;33;01mtty[0m     [40;33;01mtty25[0m  [40;33;01mtty42[0m  [40;33;01mtty6[0m     [40;33;01mttyp6[0m    [40;33;01mvcsa1[0m
+[40;33;01mfull[0m                [40;33;01mptyp6[0m   [40;33;01mtty0[0m    [40;33;01mtty26[0m  [40;33;01mtty43[0m  [40;33;01mtty60[0m    [40;33;01mttyp7[0m    [40;33;01mvcsa2[0m
+[40;33;01mfuse[0m                [40;33;01mptyp7[0m   [40;33;01mtty1[0m    [40;33;01mtty27[0m  [40;33;01mtty44[0m  [40;33;01mtty61[0m    [40;33;01mttyp8[0m    [40;33;01mvcsa3[0m
+[01;34minput[0m               [40;33;01mptyp8[0m   [40;33;01mtty10[0m   [40;33;01mtty28[0m  [40;33;01mtty45[0m  [40;33;01mtty62[0m    [40;33;01mttyp9[0m    [40;33;01mvcsa4[0m
+[40;33;01mkmem[0m                [40;33;01mptyp9[0m   [40;33;01mtty11[0m   [40;33;01mtty29[0m  [40;33;01mtty46[0m  [40;33;01mtty63[0m    [40;33;01mttypa[0m    [40;33;01mvcsa5[0m
+[40;33;01mkmsg[0m                [40;33;01mptypa[0m   [40;33;01mtty12[0m   [40;33;01mtty3[0m   [40;33;01mtty47[0m  [40;33;01mtty7[0m     [40;33;01mttypb[0m    [40;33;01mvcsa6[0m
+[40;33;01mmem[0m                 [40;33;01mptypb[0m   [40;33;01mtty13[0m   [40;33;01mtty30[0m  [40;33;01mtty48[0m  [40;33;01mtty8[0m     [40;33;01mttypc[0m    [40;33;01mvga_arbiter[0m
+[40;33;01mnetwork_latency[0m     [40;33;01mptypc[0m   [40;33;01mtty14[0m   [40;33;01mtty31[0m  [40;33;01mtty49[0m  [40;33;01mtty9[0m     [40;33;01mttypd[0m    [40;33;01mzero[0m
+[40;33;01mnetwork_throughput[0m  [40;33;01mptypd[0m   [40;33;01mtty15[0m   [40;33;01mtty32[0m  [40;33;01mtty5[0m   [40;33;01mttyAMA0[0m  [40;33;01mttype[0m
+[40;33;01mnull[0m                [40;33;01mptype[0m   [40;33;01mtty16[0m   [40;33;01mtty33[0m  [40;33;01mtty50[0m  [40;33;01mttyS0[0m    [40;33;01mttypf[0m
+[40;33;01mpimbt[0m               [40;33;01mptypf[0m   [40;33;01mtty17[0m   [40;33;01mtty34[0m  [40;33;01mtty51[0m  [40;33;01mttyS1[0m    [40;33;01murandom[0m
+[40;33;01mpsaux[0m               [40;33;01mrandom[0m  [40;33;01mtty18[0m   [40;33;01mtty35[0m  [40;33;01mtty52[0m  [40;33;01mttyS2[0m    [40;33;01mvcs[0m
+root@localhost:/dev# cd ..
+root@localhost:/# ls
+[0m[01;34mbin[0m   [01;34mdev[0m  [01;34mhome[0m  [01;34mlost+found[0m  [01;34mmnt[0m  [01;34mproc[0m  [01;34mrun[0m   [01;34msrv[0m  [30;42mtmp[0m  [01;34mvar[0m
+[01;34mboot[0m  [01;34metc[0m  [01;34mlib[0m   [01;34mmedia[0m       [01;34mopt[0m  [01;34mroot[0m  [01;34msbin[0m  [01;34msys[0m  [01;34musr[0m
+root@localhost:/# cd ~
+root@localhost:~# ls
+kv_main.ko              [0m[01;31mlibevent-2.0.21-stable.tar.gz[0m  [01;31mmemcached-1.4.21.tar.gz[0m
+[01;34mlibevent-2.0.21-stable[0m  [01;34mmemcached-1.4.21[0m
+root@localhost:~# pwd
+/root
+root@localhost:~# cd  vi kv_main.ko 
+^C[24;1HError detected while processing /usr/share/vim/vim74/syntax/synload.vim:
+line   68:
+Interrupted
+Error detected while processing /usr/share/vim/vim74/syntax/syntax.vim:
+line   19:
+Interrupted
+Error detected while processing /usr/share/vim/vimrc:
+line   20:
+Interrupted
+Interrupt: Press ENTER or type command to continue[?1h=[1;24r[m[m[0m[H[J[24;1H"kv_main.ko" [noeol] 235L, 223166C[1;1H[1m^?[0mELF[1m^B^A^A^@^@^@^@^@^@^@^@^@^A^@[0m·[1m^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@[0mh¶[1m^AA[2;1H^@^@^@^@^@^@^@^@^@[0m@[1m^@^@^@^@^@[0m@[1m^@[0m&[1m^@[0m#[1m^@[0mý{¿©ý[1m^C^@~Q^@[0mü@ùã[1m^C^@~Q^@^@^A[0mÑbÄr[1m~R[0m d[1m^@[0mùA[1m^^[3;1HH[0m@ù[1m^B[0mT@ù[1m^@^@^@~P[0m![1m^@^R~Q^@^@^@~Q^@^@^@~T^@^@~@[0mRý{Á¨À[1m^C[0m_Öý{¾©ý[1m^C^@~Q[0móS[1m^A[0m©[1m^T^@^@~P^^[4;1HS^@~@[0mÒ[1m~T^B^@~Q~@^B[0m@ù![1m^@~@[0mR[1m^@^@^S~K[0mâ[1m^C^A[0m*[1m^C^@~@[0mÒ[1m^@^@^@~T[0msÂ[1m^B~Q^?^B^V[0mñ[1m^A[0mÿÿT [1m^@~@[0mÒóó[5;1HSA©ý{Â¨À[1m^C[0m_Öý{¾©ý[1m^C^@~Q[0ma[1m^C^@[0m4?[1m^D^@[0mqÁ[1m^B^@[0mT[1m^@^@^@~P^@^@^@~Q^@^D[0m@ù¢[1m^K^@[0mù[1m^@~@^C~Q^@^^[6;1H@^@~T[0mã[1m^C^@~Q[0m¢[1m^K[0m@ùaÄr[1m~R[0m#[1m^D[0m@ùá[1m^C^B[0mª![1m^P^@[0m±"0Cúä[1m~G~_~Z^D^D^@[0m´à[1m^C^@[0m*[1m^A^@~@[0mR@[1m^@^@[0mù[1m^@^@@[7;1H~@[0mÒý{Â¨À[1m^C[0m_Ö[1m^@^C~@~R[0mý{Â¨À[1m^C[0m_Ö[1m^@^@^@~P^@^@^@~Q^@^D[0m@ù¡[1m^O^@[0mù[1m^@^@^C~Q[0m¢[1m^K^@[0mù[1m^@^@^@~T[0mää[8;1H[1m^C^@~Q[0m¢[1m^K[0m@ù[1m~C[0mÄr[1m~R[0md[1m^D[0m@ù¡[1m^O[0m@ùã[1m^C^B[0mªc[1m^P^@[0m±b0Dúå[1m~G~_~Z[0mÅ[1m^@^@[0m´à[1m^C^@[0m*@[1m^@^@[0mù[1m^@^@~@[0mÒý{Â¨ÀÀ[9;1H[1m^C[0m_Ö[1m| ^A~@~R[0mçÿÿ[1m^W[0mý{¼©ý[1m^C^@~Q[0mõ[[1m^B[0m©óS[1m^A[0m©÷[1m^[^@[0mù[1m^S[0md@ùõ[1m^C^@[0mªtb[1m^@~Q[0mà[1m^C^T[0mªö[1m^C^A[0mªwV@ù[1m^@^^[10;1H@^@~T[0mã?[1m~@^R[0mà[1m^@^@[0m4à[1m^C^C[0m*óSA©õ[B©÷[1m^[[0m@ùý{Ä¨À[1m^C[0m_Ö[1m^V^A^@[0m´Ã[1m^B[0m@ùÃ[1m^@^@[0m´³[1m^@^@[0m´à[1m^C^U[0mªá[1m^C^SS[0m[11;1Hªâ[1m^C^V[0mª`[1m^@[0m?Ö[1m^@^@^@~P^@^@^@~Q^A^T~@[0mÒ[1m^@^D[0m@ù÷[1m^B^A[0mª[1m^@^@^W~K^@^@^@~T^A^@^_^R[0m?[1m^@^_[0mk3[1m^HH[12;1H~@[0mRs[1m^R~_^Z[0m`[1m^@^@[0m6[1m~@[0m [1m~@[0mRs[1m^B^@[0m*à[1m^C^T[0mª[1m^@^@^@~T[0mã[1m^C^S[0m*à[1m^C^C[0m*óSA©õ[B©÷[1m^[[0m@ùý{Ä¨À[1m^C[0m_Öý{¼©©[13;1Hý[1m^C^@~Q[0móS[1m^A[0m©õ[[1m^B[0m©÷c[1m^C[0m©ó[1m^C^A[0mª[1m^T[0md@ù[1m^A^Z~@[0mRà[1m^C^B[0mªö[1m^C^B[0mª[1m^@^@^@~T[0mâ[1m^C^@~Q[0mAÄr[1m~R[0m#[1m^D[0m@ùâ[1m^CC[14;1H^S[0mª÷[1m^C^@[0mªB[1m^@^V[0m«B0Cúá[1m~G~_~Z[0m¡[1m^F^@[0m´á[1m^C^S[0mªâ[1m^C^V[0mª[1m^@^@^@~T~S[0mb[1m^@~Q[0mà[1m^C^S[0mª[1m~X[0mV@ù[1m^@^@^@~T[0mà[1m^^[15;1HD^@[0m5[1m^T^T~@[0mÒ[1m^U^@^@~P^T^C^T[0mªµ[1m^B^@~Q^F^@^@^T[0mà[1m^C^S[0mª[1m^@^@^@~T[0mà[1m^C^S[0mª[1m^@^@^@~T| ^C^@[0m5[1m| ^FF[0m[16;1H@ù[1m^@^@^T~K^@^@^@~T^@[0mÿ[1m^G[0m6¡[1m^F[0m@ùà[1m^C^W[0m*![1m^@^X~K^@^@^@~T[0m¡[1m^F[0m@ùÀv[1m^^[0mS[1m^X^C[0my²[1m^@^@^@[0m2![1m^@^X~KK[17;1H^@^@^@~T| ^F[0m@ù[1m^@^@^T~K^@^@^@~T| [0mÿ[1m^W[0m6à[1m^C^W[0mª[1m^@^@^@~T[0mà[1m^C^S[0mª[1m^@^@^@~T[0mà[1m^C^V[0mªóSA©õ[B©÷cc[18;1HC©ý{Ä¨À[1m^C[0m_Öà?[1m~@~R[0móSA©õ[B©÷cC©ý{Ä¨À[1m^C[0m_Öâ[1m^C^V[0mª[1m^@^@^@~T[0mÍÿÿ[1m^W[0mý{»©ý[1m^C^@~Q[0m÷c[1m^C[0m©óS[1m^A[0m©õ[[[19;1H[1m^B[0m©ù#[1m^@[0mù[1m^T[0md@ùù[1m^C^A[0mªà[1m^C^B[0mª[1m^A^Z~@[0mRö[1m^C^B[0mª[1m~S[0mb[1m^@~Q^@^@^@~T[0mø[1m^C^@[0mªà[1m^C^S[0mª[1m~W[0mV@ù[1m^@^@^@~T[0mÀ[1m^^[20;1HF^@[0m5[1m^T^T~@[0mÒ[1m^U^@^@~P[0mô[1m^B^T[0mªµ[1m^B^@~Q^F^@^@^T[0mà[1m^C^S[0mª[1m^@^@^@~T[0mà[1m^C^S[0mª[1m^@^@^@~T~@^E^@[0m5[1m| ^F[0m@@[21;1Hù[1m^@^@^T~K^@^@^@~T^@[0mÿ[1m^O[0m6¢[1m^F[0m@ùá[1m^B[0mz²A[1m^@^A~K[0mà[1m^C^X[0m*[1m^@^@^@~T[0m¢[1m^F[0m@ùÀv[1m^^[0mSá[1m^B[0my²[1m^@^@^_[0m2A[1m^@^^[22;1HA~K^@^@^@~T| ^F[0m@ù[1m^@^@^T~K^@^@^@~T| [0mÿ[1m^_[0m6[1m| ^F[0m@ù÷[1m^F[0m{²[1m^@^@^W~K^@^@^@~T[0mâ[1m^C^@~Q[0mAÄr[1m~R[0m"[1m^^[23;1HD[0m@ùô[1m^C^@[0m*á[1m^C^Y[0mª![1m^@^V[0m«"0Búà[1m~G~_~Z[0m`[1m^B^@[0mµà[1m^C^X[0mª[1m^@^@^@~T[0mà[1m^C^S[0mª[1m^@^@^@~T[0mà[1m^C^T[0mªõ[B©óSA©[24;63H1,1[11CTop[1;1H[m[m[0m[H[J[1;1H[1m^@^@^@^@^@^A[0m6key value accelerator initialization
+[1m^@[0mkv accelerator[1m^@^@^A[0m6unable to get io port at 0x%8X
+[1m^@^@^@^@^@^@^@[0mkvaccel[1m^@[0m&(kv_devices[i].inq)[1m^@^@^@^@[0mkvaccel%d[1m^@^@^@^@^@^@^@^A[0m6errr[4;1Hor creating kv_class
+[1m^@^@^@^@^@^@^A[0m6error creating kv_device
+[1m^@^@^@^@^@^A[0m6adding device %s, major: %u, minor: %u
+[1m^@^@^@^@^@^@^@^A[0m6unable to get io port at 0x%8x
+[1m^@^@^@^@^@^@^@^A[0m6Key Value Accelerator Driver Version %s Unloaded...
+[1m^@^@[0m1.0[1m^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@[0mkv_main[1m^@^@^@^@@[10;1H^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@@[11;1H^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@@[12;1H^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@@[13;1H^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@@[14;1H^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@@[15;1H^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@@[16;1H^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@@[17;1H^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@@[18;1H^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@@[19;1H^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@@[20;1H^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@@[21;1H^@^@^@^@^@^D^@^@^@^T^@^@^@^C^@^@^@[0mGNU[1m^@~G[0m²[1m~J~C[0m\ÀV[1m~\[0mV´,þ5ÝÙú[1m~U[0m¢e[1m^\^@^@^@^@[0m­¡[1m^@^@^^[22;1HD^@^@^@^@^@^H^A^@^@^@^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^B^@^@^^[23;1H@^@[0m     [1m^S[0m4[1m^@^@^@^C^A^F^@^@^@^@^B^@^@^@^@[7C^T[0mF[1m^@^@^@^C^A^H^@^@^@^@^B^@^@^@^[0m[9;2H[K[9;1H[1m@[0m[10;2H[K[10;1H[1m@[0m[11;2H[K[11;1H[1m@[0m[12;2H[K[12;1H[1m@[0m[13;2H[K[13;1H[1m@[0m[14;2H[K[14;1H[1m@[0m[15;2H[K[15;1H[1m@[0m[16;2H[K[16;1H[1m@[0m[17;2H[K[17;1H[1m@[0m[18;2H[K[18;1H[1m@[0m[19;2H[K[19;1H[1m@[0m[20;2H[K[20;1H[1m@[0m[21;2H[K[21;1H[1m@[0m[22;2H[K[22;1H[1m@[0m[23;2H[K[24;63H2,1[12C0%[1;1H[24;63H3[2;1H[24;63H4[3;1H[24;63H5[5;1H[24;63H6[6;1H[24;63H7[7;1H[24;63H8[8;1H[1;23r[23;1H
+
+
+
+[1;24r[5;1H[1m^@^@[0m1.0[1m^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@[0mkv_main[1m^@^@^@^@@[6;1H^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@@[7;1H^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@@[8;1H^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@@[9;1H^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@@[10;1H^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@@[11;1H^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@@[12;1H^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@@[13;1H^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@@[14;1H^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@@[15;1H^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@@[16;1H^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@@[17;1H^@^@^@^@^@^D^@^@^@^T^@^@^@^C^@^@^@[0mGNU[1m^@~G[0m²[1m~J~C[0m\ÀV[1m~\[0mV´,þ5ÝÙú[1m~U[0m¢e[1m^\^@^@^@^@[0m­¡[1m^@^@^^[18;1HD^@^@^@^@^@^H^A^@^@^@^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^B^@^@^^[19;1H@^@[0m     [1m^S[0m4[1m^@^@^@^C^A^F^@^@^@^@^B^@^@^@^@[7C^T[0mF[1m^@^@^@^C^A^H^@^@^@^@^B^@^@^@^^[20;1H@[7C^V[0mX[1m^@^@^@^C^B^E^@^@^@^@^B^@^@^@^@[7C^W[0mj[1m^@^@^@^C^B^G^@^@^@^@^B^@^@^@^^[21;1H@[7C^Y[0m|[1m^@^@^@^D^D^E[0mint[1m^@^B^@^@^@^@[0m  [1m^Z~N^@^@^@^C^D^G^@^@^@^@^C^H^E^@^@^@^@^BB[22;1H^@^@^@^@[8C^^[0m§[1m^@^@^@^C^H^G^@^@^@^@^E[0ms8[1m^@
+^O[0m4[1m^@^@^@^E[0mu8[1m^@[0m[24;63H[K[24;63H9,1[12C1%[5;1H[24;63H10,1[23;1H[1;23r[23;1H
+[1;24r[23;1H[1m^P[0mF[1m^@^@^@^E[0ms16[1m^@[0m[24;63H[K[24;63H11,1[11C2%[23;1H[1;23r[23;1H
+[1;24r[23;1H[1m^R[0mX[1m^@^@^@^E[0mu16[1m^@[0m[24;63H[K[24;63H12,1[11C2%[23;1H[24;63H[K[24;1H:q![?1l>[24;1H[K[24;1Hroot@localhost:~# ls
+kv_main.ko              [0m[01;31mlibevent-2.0.21-stable.tar.gz[0m  [01;31mmemcached-1.4.21.tar.gz[0m
+[01;34mlibevent-2.0.21-stable[0m  [01;34mmemcached-1.4.21[0m
+root@localhost:~# cd ..
+root@localhost:/# ls
+[0m[01;34mbin[0m   [01;34mdev[0m  [01;34mhome[0m  [01;34mlost+found[0m  [01;34mmnt[0m  [01;34mproc[0m  [01;34mrun[0m   [01;34msrv[0m  [30;42mtmp[0m  [01;34mvar[0m
+[01;34mboot[0m  [01;34metc[0m  [01;34mlib[0m   [01;34mmedia[0m       [01;34mopt[0m  [01;34mroot[0m  [01;34msbin[0m  [01;34msys[0m  [01;34musr[0m
+root@localhost:/# cd ys     find - / -name ""w"o"r"k"*"
+/sys/bus/workqueue
+/sys/devices/virtual/workqueue
+/sys/module/workqueue
+/usr/arm-linux-gnueabihf/include/c++/4.8.2/parallel/workstealing.h
+/usr/include/c++/4.8/parallel/workstealing.h
+/usr/share/doc/git/contrib/workdir
+/usr/share/vim/vim74/doc/workshop.txt
+root@localhost:/# find / -name "work*"*"[K*"[K*"[K*"[Kt*"r*"e*"e*"*tree*"
+/proc/device-tree
+/root/libevent-2.0.21-stable/WIN32-Code/tree.h
+/sys/firmware/devicetree
+/sys/kernel/slab/radix_tree_node
+/sys/module/rcutree
+/usr/arm-linux-gnueabihf/include/c++/4.8.2/bits/stl_tree.h
+/usr/arm-linux-gnueabihf/include/c++/4.8.2/ext/pb_ds/detail/bin_search_tree_
+/usr/arm-linux-gnueabihf/include/c++/4.8.2/ext/pb_ds/detail/bin_search_tree_/bin_search_tree_.hpp
+/usr/arm-linux-gnueabihf/include/c++/4.8.2/ext/pb_ds/detail/ov_tree_map_
+/usr/arm-linux-gnueabihf/include/c++/4.8.2/ext/pb_ds/detail/ov_tree_map_/ov_tree_map_.hpp
+/usr/arm-linux-gnueabihf/include/c++/4.8.2/ext/pb_ds/detail/rb_tree_map_
+/usr/arm-linux-gnueabihf/include/c++/4.8.2/ext/pb_ds/detail/rb_tree_map_/rb_tree_.hpp
+/usr/arm-linux-gnueabihf/include/c++/4.8.2/ext/pb_ds/detail/splay_tree_
+/usr/arm-linux-gnueabihf/include/c++/4.8.2/ext/pb_ds/detail/splay_tree_/splay_tree_.hpp
+/usr/arm-linux-gnueabihf/include/c++/4.8.2/ext/pb_ds/detail/tree_policy
+/usr/arm-linux-gnueabihf/include/c++/4.8.2/ext/pb_ds/detail/tree_policy/sample_tree_node_update.hpp
+/usr/arm-linux-gnueabihf/include/c++/4.8.2/ext/pb_ds/detail/tree_trace_base.hpp
+/usr/arm-linux-gnueabihf/include/c++/4.8.2/ext/pb_ds/tree_policy.hpp
+/usr/arm-linux-gnueabihf/include/c++/4.8.2/ext/rb_tree
+/usr/arm-linux-gnueabihf/include/c++/4.8.2/parallel/losertree.h
+/usr/bin/svnraisetreeconflict
+/usr/include/c++/4.8/bits/stl_tree.h
+/usr/include/c++/4.8/ext/pb_ds/detail/bin_search_tree_
+/usr/include/c++/4.8/ext/pb_ds/detail/bin_search_tree_/bin_search_tree_.hpp
+/usr/include/c++/4.8/ext/pb_ds/detail/ov_tree_map_
+/usr/include/c++/4.8/ext/pb_ds/detail/ov_tree_map_/ov_tree_map_.hpp
+/usr/include/c++/4.8/ext/pb_ds/detail/rb_tree_map_
+/usr/include/c++/4.8/ext/pb_ds/detail/rb_tree_map_/rb_tree_.hpp
+/usr/include/c++/4.8/ext/pb_ds/detail/splay_tree_
+/usr/include/c++/4.8/ext/pb_ds/detail/splay_tree_/splay_tree_.hpp
+/usr/include/c++/4.8/ext/pb_ds/detail/tree_policy
+/usr/include/c++/4.8/ext/pb_ds/detail/tree_policy/sample_tree_node_update.hpp
+/usr/include/c++/4.8/ext/pb_ds/detail/tree_trace_base.hpp
+/usr/include/c++/4.8/ext/pb_ds/tree_policy.hpp
+/usr/include/c++/4.8/ext/rb_tree
+/usr/include/c++/4.8/parallel/losertree.h
+/usr/lib/git-core/git-commit-tree
+/usr/lib/git-core/git-diff-tree
+/usr/lib/git-core/git-ls-tree
+/usr/lib/git-core/git-merge-subtree
+/usr/lib/git-core/git-merge-tree
+/usr/lib/git-core/git-mktree
+/usr/lib/git-core/git-read-tree
+/usr/lib/git-core/git-subtree
+/usr/lib/git-core/git-write-tree
+/usr/lib/python2.7/lib-dynload/_elementtree.aarch64-linux-gnu.so
+/usr/lib/python2.7/xml/etree
+/usr/lib/python2.7/lib2to3/pytree.py
+/usr/lib/python2.7/lib2to3/pytree.pyc
+/usr/lib/python3/dist-packages/pygtkcompat/__pycache__/generictreemodel.cpython-34.pyc
+/usr/lib/python3/dist-packages/pygtkcompat/generictreemodel.py
+/usr/lib/python3.4/lib2to3/pytree.py
+/usr/lib/python3.4/xml/etree
+/usr/share/console-setup/pc105.tree
+/usr/share/doc/git/contrib/subtree
+/usr/share/doc/git/contrib/subtree/git-subtree
+/usr/share/doc/git/contrib/subtree/git-subtree.sh
+/usr/share/doc/git/contrib/subtree/git-subtree.txt
+/usr/share/doc/git/contrib/subtree/t/t7900-subtree.sh
+/usr/share/doc/libhtml-tree-perl
+/usr/share/doc/libhtml-tree-perl/examples/htmltree
+/usr/share/man/man1/git-diff-tree.1.gz
+/usr/share/man/man1/git-read-tree.1.gz
+/usr/share/man/man1/git-write-tree.1.gz
+/usr/share/man/man1/git-subtree.1.gz
+/usr/share/man/man1/git-mktree.1.gz
+/usr/share/man/man1/git-ls-tree.1.gz
+/usr/share/man/man1/git-commit-tree.1.gz
+/usr/share/man/man1/git-merge-tree.1.gz
+/usr/share/man/man3/btree.3.gz
+/usr/share/mime/treemagic
+/usr/share/vim/vim74/ftplugin/treetop.vim
+/usr/share/vim/vim74/indent/treetop.vim
+/usr/share/vim/vim74/syntax/treetop.vim
+/var/lib/dpkg/info/libhtml-tree-perl.md5sums
+/var/lib/dpkg/info/libhtml-tree-perl.list
+root@localhost:/# 
